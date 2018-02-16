@@ -16,15 +16,23 @@
 @oxygen-hover-glow-radius:   12px;
 
 // Oxygen Buttons and button-like widgets
-@oxygen-button-top-color:     #ececea;
-@oxygen-button-bottom-color:  #d6d4d1;
+@oxygen-button-base-color:    #d6d4d1;
 @oxygen-button-radius:        5px;
 @oxygen-button-border:        linear-gradient(#ebe9e7, #d0cece);
-@oxygen-tab-shadow-color:     rgba(0, 0, 0, 0.15);
+@oxygen-colored-button-text-color: white;
+
+.render-button-background(@baseColor) {
+    background: linear-gradient(to Bottom,
+                                lighten(@baseColor, 9%) 30%,
+                                @baseColor 100%);
+}
 
 // Oxygen tabs
 @oxygen-tab-background:  linear-gradient(to Bottom, #e4e1e0 30%, #e5e5e5 100%);
+@oxygen-tab-shadow-color:     rgba(0, 0, 0, 0.15);
 
+// Oxygen docks
+@oxygen-dock-border-color: #e3e3e1;
 
 // Animations
 @oxygen-animation-duration: 0.3s;
@@ -52,7 +60,7 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: #f2f0f0;
+@base-background-color: #f0f0f0;
 @base-border-color:     darken(@base-background-color, 8%);
 
 // Component colors

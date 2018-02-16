@@ -2,5 +2,13 @@ atom-text-editor[mini] {
   border: 1px solid #9c9c9c;
   border-radius: 4px;
   color: @text-color-highlight;
-  background-color: white;
+}
+
+.input-text,
+.input-search,
+.input-textarea {
+    &:active, &:focus {
+        background-color: #eee;
+        box-shadow: 0 0 8px 0 @oxygen-glow-color;
+    }
 }

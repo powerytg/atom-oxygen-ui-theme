@@ -1,6 +1,5 @@
 .atom-dock {
   &-resize-handle {
-    border-right: 1px solid #cacaca;
     position: absolute;
     z-index: 10;
 
@@ -10,10 +9,12 @@
     }
 
     &.left {
+      border-right: 1px solid @oxygen-dock-border-color;
       right: 0;
     }
 
     &.right {
+      border-left: 1px solid @oxygen-dock-border-color;
       left: 0;
     }
 
@@ -23,10 +24,12 @@
     }
 
     &.top {
+      border-bottom: 1px solid @oxygen-dock-border-color;
       bottom: 0;
     }
 
     &.bottom {
+      border-top: 1px solid @oxygen-dock-border-color;
       top: 0;
     }
   }

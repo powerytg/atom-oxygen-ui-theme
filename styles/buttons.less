@@ -7,9 +7,7 @@
 
 .btn {
   // Background
-  background: linear-gradient(to Bottom,
-                              @oxygen-button-top-color 30%,
-                              #e2e2e2 100%);
+  .render-button-background(@oxygen-button-base-color);
 
   background-clip: padding-box;
 
@@ -20,8 +18,8 @@
 
   // Inner and outter shadows
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25),   // Drop shadow
-              0px 2px 1px #f7f6f5 inset,          // Top inner stroke in white color
-              0px -1px 1px #f7f6f5 inset;         // Bottom inner stroke in dark color
+              0px 2px 1px #f7f6f5 inset,          // Top inner stroke
+              0px -1px 1px #f7f6f5 inset;         // Bottom inner stroke
 
   transition: @oxygen-hover-transition;
 
@@ -44,7 +42,6 @@
   }
 }
 
-
 // Colored buttons -----------------------
 
 .btn.btn-primary { .btn-color(@background-color-info); }
@@ -54,24 +51,9 @@
 .btn.btn-error   { .btn-color(@background-color-error); }
 
 .btn-color(@bg) {
-  color: @text-color-selected;
-  background-color: @bg;
-  &:hover,
-  &:focus {
-    background-color: lighten(@bg, 4%);
-  }
-  &:active {
-    background-color: darken(@bg, 4%);
-  }
-  &.selected {
-    background-color: lighten(@bg, 4%);
-  }
-  &.selected:focus,
-  &.selected:hover {
-    background-color: lighten(@bg, 8%);
-  }
+  color: @oxygen-colored-button-text-color;
+  .render-button-background(@bg);
 }
-
 
 // Button Group -----------------------
 
