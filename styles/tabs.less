@@ -1,4 +1,4 @@
-
+//
 // Tabs
 // -------------------
 
@@ -6,21 +6,50 @@
 // Overrides: atom/tabs
 
 .tab-bar {
-  background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
+  background: #e3e3e1;
+  border-bottom: 1px solid white;
+  box-shadow: 0px -6px 18px rgba(0, 0, 0, 0.04) inset;
 
   .tab {
+    margin-top: 6px;
+    margin-left: 4px;
+    margin-right: 2px;
     color: @text-color;
     height: @tab-height;
     line-height: @tab-height;
     font-size: @font-size;
-    border-right: 1px solid @tab-border-color;
-    background-color: @tab-background-color;
+
+    // Background
+    background-image: @oxygen-tab-background;
+
+    // A bit of subtile border
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-image: @oxygen-button-border;
+    border-image-slice: 1;
+
+    // Inner and outter shadows
+    box-shadow: 0px 1px 5px 0px @oxygen-tab-shadow-color,  // Drop shadow
+                0px 1.5px 1px #ffffff inset;         // Top inner stroke in white color
+
+    transition: @oxygen-hover-transition;
+
     &.active {
+      font-weight: bold;
       color: @text-color-selected;
-      background-color: @tab-background-color-active;
     }
 
+    &.active,
+    &:hover {
+      background-image: linear-gradient(to Bottom, #efefef 30%, #ececea 100%);
+      background-image: radial-gradient(farthest-corner at 50% 0%,
+                                  #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:hover {
+      color: @text-color-selected;
+      box-shadow: 0 0 @oxygen-hover-glow-radius 0 @oxygen-glow-color;
+    }
 
     // Modified Icon (the circle) -------------------
     &.modified:not(:hover) .close-icon {
@@ -32,7 +61,6 @@
     &.modified:hover .close-icon {
       color: currentColor;
     }
-
 
     // Close Icon (the X) -------------------
     .close-icon:hover {

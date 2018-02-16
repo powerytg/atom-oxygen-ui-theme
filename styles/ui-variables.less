@@ -10,12 +10,31 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
+// Oxygen theme colors
+@oxygen-glow-color:    #448ccb;
+@oxygen-glow-radius:   8px;
+@oxygen-hover-glow-radius:   12px;
+
+// Oxygen Buttons and button-like widgets
+@oxygen-button-top-color:     #ececea;
+@oxygen-button-bottom-color:  #d6d4d1;
+@oxygen-button-radius:        5px;
+@oxygen-button-border:        linear-gradient(#ebe9e7, #d0cece);
+@oxygen-tab-shadow-color:     rgba(0, 0, 0, 0.15);
+
+// Oxygen tabs
+@oxygen-tab-background:  linear-gradient(to Bottom, #e4e1e0 30%, #e5e5e5 100%);
+
+
+// Animations
+@oxygen-animation-duration: 0.3s;
+@oxygen-hover-transition: box-shadow @oxygen-animation-duration ease-out;
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
+@text-color:           #676767;
 @text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color-highlight: #343434;
+@text-color-selected:  #343434;
 
 @text-color-info:    hsl(219,  79%, 66%);
 @text-color-success: hsl(140,  44%, 62%);
@@ -33,7 +52,7 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
+@base-background-color: #f2f0f0;
 @base-border-color:     darken(@base-background-color, 8%);
 
 // Component colors
@@ -61,6 +80,8 @@
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:    @base-background-color;
+@tab-bar-background-color-top: @base-background-color;
+@tab-bar-background-color-bottom: #e3e0de;
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
 @tab-background-color-active: lighten(@tab-bar-background-color, 10%);

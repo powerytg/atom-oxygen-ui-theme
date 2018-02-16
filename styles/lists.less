@@ -13,18 +13,24 @@
     // We want to highlight the background of the list items because we dont know their size.
     &.selected {
       color: @text-color-selected;
-      background-color: @background-color-selected;
+      .list-selected();
       &:before{ display: none; }
     }
   }
 }
 
+.list-selected() {
+  // Background
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
 
 // List Tree -------------------
 .list-tree {
   color: @text-color;
   .selected {
     color: @text-color-selected;
+    .list-selected();
   }
 }
 
@@ -32,6 +38,7 @@
 // Select List -------------------
 .select-list {
   li {
+    background-color: #cacaca;
     padding: @component-padding/2 @component-padding;
   }
   .status {
@@ -48,7 +55,7 @@
   padding: @popover-list-padding;
   border-radius: @component-border-radius;
   background-color: @overlay-background-color;
-  box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+  box-shadow: 0 2px 12px 1px #448ccb;
 
   .list-group {
     margin-top: @popover-list-padding;
