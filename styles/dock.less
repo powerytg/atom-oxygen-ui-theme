@@ -1,0 +1,33 @@
+.atom-dock {
+  &-resize-handle {
+    border-right: 1px solid #cacaca;
+    position: absolute;
+    z-index: 10;
+
+    &.left, &.right {
+      top: 0;
+      bottom: 0;
+    }
+
+    &.left {
+      right: 0;
+    }
+
+    &.right {
+      left: 0;
+    }
+
+    &.top, &.bottom {
+      left: 0;
+      right: 0;
+    }
+
+    &.top {
+      bottom: 0;
+    }
+
+    &.bottom {
+      top: 0;
+    }
+  }
+}

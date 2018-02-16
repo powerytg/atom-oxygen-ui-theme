@@ -11,6 +11,8 @@
                               @oxygen-button-top-color 30%,
                               #e2e2e2 100%);
 
+  background-clip: padding-box;
+
   // A bit of subtile border
   border-radius: @oxygen-button-radius;
   border-image: @oxygen-button-border;
@@ -22,7 +24,7 @@
               0px -1px 1px #f7f6f5 inset;         // Bottom inner stroke in dark color
 
   transition: @oxygen-hover-transition;
-  
+
   &:hover,
   &:focus {
     color: @text-color-highlight;
@@ -77,6 +79,4 @@
   // Margins avoid outter shadows to overlap each other
   margin-left: 5px;
   margin-right: 5px;
-
-  border-color: hsla(0,0%,0%,.2);
 }
