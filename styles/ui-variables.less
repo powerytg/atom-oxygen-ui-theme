@@ -1,17 +1,16 @@
 
 // UI Variables
 // -------------------
-
-// These are the official UI variables that every UI theme should define.
-// It allows other packages to match your theme.
-
+//
+// Ultra smooth theme inspried by the KDE 4 Oxygen theme
+// Comparing to the original Oxygen L&F, this theme has even more subtile colors
+//
 // Overrides: atom/static/variables/ui-variables.less
 
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
-
 // Oxygen theme colors
-@oxygen-glow-color:    #2896f4;
+@oxygen-accent-color:  #2896f4;
+@oxygen-accent-color-darker:  #5aabdb;
+@oxygen-glow-color:    @oxygen-accent-color;
 @oxygen-glow-radius:   8px;
 @oxygen-hover-glow-radius:   12px;
 
@@ -31,8 +30,10 @@
 @oxygen-tab-background:  linear-gradient(to Bottom, #e4e1e0 30%, #e5e5e5 100%);
 @oxygen-tab-shadow-color:     rgba(0, 0, 0, 0.15);
 
-// Oxygen docks
-@oxygen-dock-border-color: #e3e3e1;
+// Oxygen docks and panels
+@oxygen-panel-base-color: #e3e3e1;
+@oxygen-panel-lighter-color: lighten(@oxygen-panel-base-color, 5%);
+@oxygen-dock-border-color: @oxygen-panel-base-color;
 
 // Animations
 @oxygen-animation-duration: 0.3s;
@@ -60,8 +61,8 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: #f0f0f0;
-@base-border-color:     #e3e3e1;
+@base-background-color: @oxygen-panel-base-color;
+@base-border-color:     @oxygen-panel-base-color;
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -95,7 +96,7 @@
 @tab-background-color-active: lighten(@tab-bar-background-color, 10%);
 @tab-border-color:            @base-border-color;
 
-@tree-view-background-color: @base-background-color;
+@tree-view-background-color: @oxygen-panel-lighter-color;
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
