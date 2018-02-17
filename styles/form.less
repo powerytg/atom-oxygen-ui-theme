@@ -1,8 +1,14 @@
 atom-text-editor[mini] {
+  outline: none;
   border: 1px solid #acacac;
   border-radius: 4px;
   color: @text-color-highlight;
-  background-clip: border-box;
+
+  &.is-focused {
+    // background-color: white;
+    // background-color: #eee;
+    // box-shadow: 0 0 8px 0 @oxygen-glow-color;
+  }
 }
 
 .input-text,
