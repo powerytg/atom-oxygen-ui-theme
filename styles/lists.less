@@ -17,6 +17,15 @@
       &:before{ display: none; }
     }
   }
+
+  li:hover {
+      .render-hover-highlight();
+  }
+}
+
+.render-hover-highlight() {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0px 8px 0 rgba(68,140,203, 0.2);
 }
 
 .render-selected-highlight() {
@@ -44,9 +53,16 @@
   }
 }
 
+// List tree selected item
 .list-group .selected::before,
 .list-tree .selected::before {
   .render-selected-highlight();
+}
+
+.list-tree .list-item {
+    &:hover{
+      .render-hover-highlight();
+    }
 }
 
 // Select List -------------------
