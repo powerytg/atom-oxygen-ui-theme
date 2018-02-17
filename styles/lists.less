@@ -13,7 +13,7 @@
     // We want to highlight the background of the list items because we dont know their size.
     &.selected {
       color: @text-color-selected;
-      .render-selected-highlight();
+      .render-hover-highlight();
       &:before{ display: none; }
     }
   }
@@ -24,8 +24,9 @@
 }
 
 .render-hover-highlight() {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0px 8px 0 rgba(68,140,203, 0.2);
+  border-top: 1px solid white;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 4px 0 rgba(40, 150, 244, 0.15);
 }
 
 .render-selected-highlight() {
@@ -56,13 +57,7 @@
 // List tree selected item
 .list-group .selected::before,
 .list-tree .selected::before {
-  .render-selected-highlight();
-}
-
-.list-tree .list-item {
-    &:hover{
-      .render-hover-highlight();
-    }
+  .render-hover-highlight();
 }
 
 // Select List -------------------

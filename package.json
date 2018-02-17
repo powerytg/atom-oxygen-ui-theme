@@ -2,12 +2,23 @@
   "name": "kde-oxygen-ui",
   "theme": "ui",
   "version": "0.0.0",
-  "description": "A short description of your UI theme",
+  "description": "KDE Oxygen inspried theme (light color)",
   "keywords": [
     "ui",
-    "theme"
+    "theme",
+    "kde",
+    "clean",
+    "light",
+    "smooth",
+    "oxygen",
+    "kde4",
+    "kde 4",
+    "linux",
+    "white",
+    "blue",
+    "plasma"
   ],
-  "repository": "https://github.com/atom-community/ui-theme-template",
+  "repository": "https://github.com/powerytg/atom-oxygen-ui-theme",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
